@@ -1,13 +1,13 @@
 # EOS Network Foundation Grant Proposal
 
-- **Project Name:** EOSIO cross-platform mobile wallet
+- **Project Name:** EOSIO social recovery
 - **Team Name:** Tonomy Foundation
 - **EOS Payment Address:** tonomyaccou1
 - **[Level](https://github.com/eosnetworkfoundation/grant-framework#grant-levels):** 1
 - **Pomelo Grant(s):** N/A
 - **Project is Open-Source:** Yes
 - **Project was part of Token sale:** No
-- **Repository where Project resides:** https://github.com/Tonomy-Foundation/tonomy-id
+- **Repository where Project resides:** https://github.com/Tonomy-Foundation/tonomy-id-sdk
 
 ## Contact
 
@@ -17,11 +17,21 @@
 
 ## Project Overview
 
-We submit this grant proposal for feedback about the design and fit for the EOS and EOSIO ecosystems. We are happy to work with you to fix problems in the ecosystem related to identity and be connected with others doing so. We want to align with the community reasonably before moving forward with developing something to ensure it can be used, easily and have the greatest impact for EOS and EOSIO. Your support and funding help us achieve this goal!
+We submit this grant proposal for feedback about the design and fit for the EOSIO ecosystems. We are happy to work with you to fix problems in the ecosystem related to identity and be connected with others doing so. We want to align with the community reasonably before moving forward with developing something to ensure it can be used, easily and have the greatest impact for EOS and EOSIO. Your support and funding help us achieve this goal!
 
 ### Overview
 
-We are building a cross-platform mobile blockchain and SSI wallet for EOSIO public chains like EOS, Telos and WAX. This can be used to send tokens, sign dApp transactions, passwordless sign into web2 and web3 apps and share credentials. We plan to build several non-custodial recovery mechanisms: social recovery, security questions and hardware recovery. This recovery will allow users to recover both keys and sovereign data. Our experience in sovereign identity and design give us the confidence needed to say we can do this.
+TODO
+
+- about social recovery (intro and links).
+- Modular. smart contracts, sdk. open source
+- future features: other recovery, migrate existing accounts.
+- approach: tonomy ID.
+- because our first proposal, limited to $10,000 very limited in scope. actual budget to complete.
+
+We are building a cross-platform mobile blockchain and SSI wallet for EOSIO public chains like EOS, Telos and WAX. This can be used to send tokens, sign dApp transactions, passwordless sign into web2 and web3 apps and share credentials. 
+
+We plan to build several non-custodial recovery mechanisms: social recovery, security questions and hardware recovery. This recovery will allow users to recover both keys and sovereign data. Our experience in sovereign identity and design give us the confidence needed to say we can do this.
 
 We see this project as an extension of the Wallet+ blue paper. We want to support the work of these new EOSIO/Mandel SDK's by integrating early releases and giving feedback and potentially contributing to the development. Furthermore, we had already had considered several of the features proposed in this blue paper: application registry, hardware wallets, account recovery and asset proxy/hosting service. While the initial proposal of Wallet+ is to support web applications, we will be able to adopt the JavaScript/typescript packages for our application as well as we are using React Native for the mobile wallet. This will also give the added benefit of providing a mobile testing ground for the Wallet+ deliverables.
 
@@ -29,8 +39,8 @@ The mobile wallet will be fully open source (MIT or Apache 2.0 license) and prov
 
 Due to the limited funding from only being at level 1 ($10,000), this grant proposal only seeks funding to support the development of its first recovery mechanism - social recovery. Other work is not covered in this proposal. We will be self-funding as well as receiving external European Horizon 2027 and other funding for the release of the first beta edition of the wallet. For long term commercial sustainability we plan to offered it as a software as a service model for public and private chains, as well as continue to seek EU, ENF and other innovation funding.
 
-- **Name:** EOSIO cross-platform wallet
-- **Brief Description:**  Build a new EOSIO cross-platform mobile client with advanced features such as recovery and SSI
+- **Name:** EOSIO social recovery
+- **Brief Description:**  Build tools that allow EOSIO accounts to perform social recovery.
 - **Relationship to EOSIO:** Our application is built on top of the EOSIO blockchain framework. It will be compatible with any pure-EOSIO blockchain. We will use tools set out in the Wallet+ paper and support their development.
 - **Reason for Interest:** We want to support the public EOS, Telos and WAX ecosystems. In the future, we plan to take this software and provide it in as software as a service model to industry and enterprise use cases.
 
@@ -62,6 +72,8 @@ Application architecture
 We plan to use the EOSIO account model hierarchy for recoverability. This is an example of what an account might look like
 ![Account model example](https://drive.google.com/uc?export=view&id=1Jm7xwBnM6x4lRJRxOEMaSVAxEeIrwvY5)
 
+TODO simplify diagrams for social recovery only.
+
 ### **API specifications of the core functionality**
 
 Draft public interfaces (typescript) for applications integrating with Tonomy ID:
@@ -72,17 +84,16 @@ Draft public interfaces (typescript) for applications integrating with Tonomy ID
 
 #### **An overview of the technology stack to be used**
 
-  - See Application architecture diagram above
-  - Mobile client: React Native
-  - Key storage: [react-native-keychain](https://www.npmjs.com/package/react-native-keychain) (which uses key enclaves on the mobile device if available)
-  - Transport layer: QR codes and DIDComm
-  - Data models: EOSIO signing request (ESR), verifiable credentials with [schema.org](https://schema.org) structures
-  - Blockchain: EOSIO
+- See Application architecture diagram above
+- Mobile client: React Native
+- Key storage: [react-native-keychain](https://www.npmjs.com/package/react-native-keychain) (which uses key enclaves on the mobile device if available)
+- Transport layer: QR codes and DIDComm
+- Data models: EOSIO signing request (ESR), verifiable credentials with [schema.org](https://schema.org) structures
+- Blockchain: EOSIO
 
 #### **Documentation of core components, protocols, architecture, etc. to be deployed**
 
 This project is creating the following software products:
-- **[Tonomy ID](https://github.com/Tonomy-Foundation/Tonomy-ID)** - The cross-platform mobile wallet (Android and iOS) for public and private EOSIO blockchains
 - **[Tonomy ID SDK](https://github.com/Tonomy-Foundation/Tonomy-ID-SDK)** -  The typescript library used in Tonomy ID to interact and call with the EOSIO blockchain and services. It is also used as the public API for integration by applications to do single sign-on, share credentials and sign transactions.
 - **Tonomy ID demo app** - A reactjs application showing the demo flows of applications that integrate with Tonomy ID to sign transactions, share credentials and consent and sign into their web2 or web3 application.
 - **Tonomy ID integration** - Nntegration repository to run the above three applications in a developer environment for integration and automated testing.
