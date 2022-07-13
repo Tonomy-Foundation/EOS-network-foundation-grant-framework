@@ -169,7 +169,7 @@ In addition to the above, we want to make the distinction between Tonomy ID and 
 - Chris Verhoef
 - Mikhail Rusanov
 - Carrie Ann Smith
-- Jordan Fisher
+- Stefan Selg 
 - Mia Jacobson
 - Suneet Bendre
 - Rebal Alhaqash
@@ -221,7 +221,7 @@ TODO add something about Suneet
 - https://www.linkedin.com/in/christiaanverhoef/
 - https://www.linkedin.com/in/rusanovmp/
 - https://www.linkedin.com/in/carrie-ann-smith-95240899/
-- https://www.linkedin.com/in/jordanelizabethfisher/
+- https://www.linkedin.com/in/stefan-selg-b9347b1b5
 - https://www.linkedin.com/in/mia-jacobson-012218139/
 - https://www.linkedin.com/in/suneet-bendre/
 - https://www.linkedin.com/in/rebal-alhaqash-683b0b174/
